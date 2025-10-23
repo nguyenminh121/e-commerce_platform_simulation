@@ -10,6 +10,7 @@ Thành phần	Công nghệ	Mô tả
 Frontend (Giao diện người dùng)	HTML, CSS, JavaScript	Tạo UI/UX trực quan, hiển thị sản phẩm, giỏ hàng, form thanh toán.
 Backend (Xử lý logic và request)	PHP (thuần)	Quản lý session, xử lý form, kết nối database, xác thực người dùng.
 Database (CSDL)	MySQL (trên XAMPP)	Lưu trữ thông tin sản phẩm, người dùng, đơn hàng, thanh toán.
+Console Simulation	C++ (OOP)	Mô phỏng logic nghiệp vụ e-commerce với OOP patterns (Polymorphism, Abstract Classes, Inheritance).
 ________________________________________
 🧱 Cấu Trúc Thư Mục Dự Án
 ecommerce-simulation/
@@ -106,5 +107,46 @@ ________________________________________
 •	Đánh giá sản phẩm (Review System)
 •	Giao diện responsive (mobile-first)
 •	REST API để kết nối với mobile app
+________________________________________
+🖥️ C++ Console Simulation
+
+**File:** `iShopefy.cpp`
+
+**Mô tả:** Chương trình mô phỏng logic nghiệp vụ e-commerce sử dụng OOP C++ với:
+- Classes: Product, Customer, ShoppingCart, Order, Payment
+- Abstract PaymentMethod interface với CreditCard, PayPal, Cash implementations  
+- Polymorphism cho DiscountStrategy (Student, Seasonal, Loyalty discounts)
+
+**Cách chạy:**
+
+1. **Compile với MinGW (Windows PowerShell):**
+   ```powershell
+   cd c:\Users\NgMinh\OneDrive\Documents\MyData\NEU\Subjects\Sophomore\I\OOP\iShopefy
+   c:\mingw64\bin\g++.exe -std=c++17 -O2 -Wall iShopefy.cpp -o iShopefy.exe
+   ```
+
+2. **Hoặc sử dụng VS Code Task (Ctrl+Shift+P → "Tasks: Run Task"):**
+   - Chọn "Build iShopefy.cpp (MinGW g++)"
+
+3. **Chạy chương trình:**
+   ```powershell
+   .\iShopefy.exe
+   ```
+
+**Output mẫu:**
+```
+Welcome to iShopefy (C++ OOP Simulation)
+Current cart subtotal: $81.97
+Strategy 'Student Discount' would discount $8.20 
+Chosen strategy: Student Discount
+[Payment] Charging Credit Card (...) Amount: $73.77
+===== iShopefy - Order Summary =====
+Order ID: 10001
+Customer: Alice Nguyen
+...
+Thank you for shopping at iShopefy!
+```
+
+**Exit code 0** = Chương trình hoàn thành thành công ✅
 ________________________________________
 
